@@ -2,7 +2,7 @@ body {
     font-family: "Roboto", sans-serif;
     color: #2e2f42;
     background-color: #fff;
-    width: 1440px;
+
     margin: 0% auto;
 }
 
@@ -159,7 +159,9 @@ img {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(./../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 1440px;
+    max-width: 1440px;
+    margin: 0% auto;
+    background-size: cover;
 }
 
 .main-title {
@@ -190,12 +192,14 @@ img {
     width: 169px;
     height: 56px;
     white-space: nowrap;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-action:hover,
 .hero-action:focus,
 .hero-action:active {
     background-color: #404bbf;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* #endregion hero */
@@ -262,6 +266,8 @@ img {
 
 .team {
     background-color: #f4f4fd;
+    max-width: 1440px;
+    margin: 0% auto;
 
 }
 
@@ -336,19 +342,23 @@ img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: block;
-    padding: 12px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.soc-icon-link.team:hover,
-.soc-icon-link.team:focus {
+.soc-icon-link:hover,
+.soc-icon-link:focus {
     background-color: #404BBF;
 }
 
 .soc-icon {
-    fill: #fff;
+    fill: #F4F4FD;
+
+
 
 }
 
@@ -383,7 +393,7 @@ img {
 
 .portfolio-list-item {
     flex-basis: calc((100% - 48px) / 3);
-
+    transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover,
@@ -453,6 +463,8 @@ img {
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
+    max-width: 1440px;
+    margin: 0% auto;
 
 
 }
@@ -460,6 +472,7 @@ img {
 .container.footer {
     display: flex;
     column-gap: 120px;
+    align-items: baseline;
 }
 
 .footer-logo {
@@ -495,9 +508,7 @@ img {
     gap: 16px;
 }
 
-.soc-icon-link.footer {
-    padding: 8px;
-}
+
 
 .soc-icon-link.footer:hover,
 .soc-icon-link.footer:focus {
